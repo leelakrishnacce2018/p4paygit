@@ -1,6 +1,8 @@
 package com.example.p4pay.model;
 
 import org.hibernate.annotations.NaturalId;
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 
 /**
@@ -8,6 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "roles")
+@Audited
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
